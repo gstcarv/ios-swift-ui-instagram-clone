@@ -53,8 +53,14 @@ struct FeedCell: View {
                         .frame(width: 20, height: 20)
                 }
             }
-            .padding(10)
+            .padding([.leading, .top], 10)
             .foregroundColor(.black)
+            
+            Text("2 likes")
+                .font(.system(size: 14, weight: .semibold))
+                .foregroundColor(.black)
+                .padding([.top, .bottom], 3)
+                .padding(.leading, 10)
             
             HStack {
                 Text("batman")
