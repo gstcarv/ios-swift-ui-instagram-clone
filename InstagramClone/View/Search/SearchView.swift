@@ -13,10 +13,11 @@ struct SearchView: View {
     
     var body: some View {
         ScrollView {
-            Text("Search")
-            
             SearchBar(text: $searchText)
                 .padding(.horizontal, 15)
+                .padding(.bottom, 15)
+            
+            PostGridView()
         }
     }
 }
