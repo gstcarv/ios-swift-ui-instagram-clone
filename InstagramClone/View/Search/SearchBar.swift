@@ -9,7 +9,11 @@ import SwiftUI
 
 struct SearchBar: View {
     
-    @Binding var text: String;
+    @Binding var text: String
+    @Binding var isEditing: Bool
+    
+    @State private var opacityValue: Double = 0
+    @State private var offsetValue: CGFloat = 100
     
     var body: some View {
         HStack {
@@ -26,12 +30,36 @@ struct SearchBar: View {
                             .padding(.leading, 8)
                     }
                 )
+                .onTapGesture {
+                    isEditing = true
+                    withAnimation(.default) {
+                        opacityValue = 1
+                        offsetValue = 0
+                    }
+                }
+            
+            if isEditing {
+                Button(action: {
+                    isEditing = false
+                    text = ""
+                    UIApplication.shared.endEditing()
+                    withAnimation(.default) {
+                        opacityValue = 0
+                        offsetValue = 100
+                    }
+                }) {
+                    Text("Cancel")
+                }
+                .padding(.trailing, 8)
+                .offset(x: offsetValue)
+                .opacity(opacityValue)
+            }
         }
     }
 }
 
 struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {
-        SearchBar(text: .constant("hello world"))
+        SearchBar(text: .constant("hello world"), isEditing: .constant(true))
     }
 }
