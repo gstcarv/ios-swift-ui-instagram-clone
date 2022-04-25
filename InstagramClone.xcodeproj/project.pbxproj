@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7053D092817269000849F4A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7053D082817269000849F4A /* ImagePicker.swift */; };
+		B71474F228130C8A00F5875B /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71474F128130C8A00F5875B /* ProfileHeaderView.swift */; };
+		B71474F428131AE200F5875B /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71474F328131AE200F5875B /* UserStatView.swift */; };
+		B71474F72813204500F5875B /* ProfileActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71474F62813204500F5875B /* ProfileActionButtons.swift */; };
 		B73A54F62810AEAA004A34A5 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A54F52810AEAA004A34A5 /* SearchBar.swift */; };
 		B73A54F82810B1C8004A34A5 /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A54F72810B1C8004A34A5 /* PostGridView.swift */; };
 		B73A54FA2811A5DD004A34A5 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A54F92811A5DD004A34A5 /* UserCell.swift */; };
@@ -27,6 +31,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B7053D082817269000849F4A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		B7053D0A2817340200849F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B71474F128130C8A00F5875B /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		B71474F328131AE200F5875B /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
+		B71474F62813204500F5875B /* ProfileActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionButtons.swift; sourceTree = "<group>"; };
 		B73A54F52810AEAA004A34A5 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		B73A54F72810B1C8004A34A5 /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
 		B73A54F92811A5DD004A34A5 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -77,6 +86,7 @@
 		B7DF8658280F9C9100559D34 /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				B7053D0A2817340200849F4A /* Info.plist */,
 				B7DF866C280F9D1F00559D34 /* Utils */,
 				B7DF866D280F9D2200559D34 /* API */,
 				B7DF866B280F9D1A00559D34 /* ViewModel */,
@@ -135,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				B73A54FD2811B4E6004A34A5 /* Extensions.swift */,
+				B7053D082817269000849F4A /* ImagePicker.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -167,6 +178,9 @@
 			isa = PBXGroup;
 			children = (
 				B7DF8687280F9F7900559D34 /* ProfileView.swift */,
+				B71474F128130C8A00F5875B /* ProfileHeaderView.swift */,
+				B71474F328131AE200F5875B /* UserStatView.swift */,
+				B71474F62813204500F5875B /* ProfileActionButtons.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -325,9 +339,13 @@
 				B73A54F82810B1C8004A34A5 /* PostGridView.swift in Sources */,
 				B7DF8672280F9D8200559D34 /* ContentView.swift in Sources */,
 				B7DF865A280F9C9100559D34 /* InstagramCloneApp.swift in Sources */,
+				B71474F72813204500F5875B /* ProfileActionButtons.swift in Sources */,
 				B7DF8686280F9EEA00559D34 /* NotificationsView.swift in Sources */,
+				B7053D092817269000849F4A /* ImagePicker.swift in Sources */,
 				B7DF868A280F9F9100559D34 /* UploadPostView.swift in Sources */,
+				B71474F228130C8A00F5875B /* ProfileHeaderView.swift in Sources */,
 				B7DF8688280F9F7900559D34 /* ProfileView.swift in Sources */,
+				B71474F428131AE200F5875B /* UserStatView.swift in Sources */,
 				B73A54FA2811A5DD004A34A5 /* UserCell.swift in Sources */,
 				B73A54F62810AEAA004A34A5 /* SearchBar.swift in Sources */,
 				B7DF8680280F9E8E00559D34 /* MainTabView.swift in Sources */,
@@ -467,6 +485,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"InstagramClone/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = InstagramClone/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Allow access to select an image";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -495,6 +515,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"InstagramClone/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = InstagramClone/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Allow access to select an image";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
