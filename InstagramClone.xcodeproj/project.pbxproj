@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B7053D092817269000849F4A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7053D082817269000849F4A /* ImagePicker.swift */; };
+		B7053D0C281743AC00849F4A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7053D0B281743AC00849F4A /* LoginView.swift */; };
+		B7053D0E281743B300849F4A /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7053D0D281743B300849F4A /* RegistrationView.swift */; };
+		B7053D10281743C800849F4A /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7053D0F281743C800849F4A /* ResetPasswordView.swift */; };
+		B7053D122817621400849F4A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7053D112817621400849F4A /* CustomTextField.swift */; };
+		B7053D14281766B700849F4A /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7053D13281766B700849F4A /* CustomSecureField.swift */; };
 		B71474F228130C8A00F5875B /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71474F128130C8A00F5875B /* ProfileHeaderView.swift */; };
 		B71474F428131AE200F5875B /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71474F328131AE200F5875B /* UserStatView.swift */; };
 		B71474F72813204500F5875B /* ProfileActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71474F62813204500F5875B /* ProfileActionButtons.swift */; };
@@ -33,6 +38,11 @@
 /* Begin PBXFileReference section */
 		B7053D082817269000849F4A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		B7053D0A2817340200849F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B7053D0B281743AC00849F4A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B7053D0D281743B300849F4A /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		B7053D0F281743C800849F4A /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		B7053D112817621400849F4A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		B7053D13281766B700849F4A /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		B71474F128130C8A00F5875B /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		B71474F328131AE200F5875B /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
 		B71474F62813204500F5875B /* ProfileActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionButtons.swift; sourceTree = "<group>"; };
@@ -146,6 +156,8 @@
 			children = (
 				B73A54FD2811B4E6004A34A5 /* Extensions.swift */,
 				B7053D082817269000849F4A /* ImagePicker.swift */,
+				B7053D112817621400849F4A /* CustomTextField.swift */,
+				B7053D13281766B700849F4A /* CustomSecureField.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -222,6 +234,9 @@
 		B7DF8679280F9DC800559D34 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				B7053D0B281743AC00849F4A /* LoginView.swift */,
+				B7053D0D281743B300849F4A /* RegistrationView.swift */,
+				B7053D0F281743C800849F4A /* ResetPasswordView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -337,9 +352,12 @@
 				B7DF8684280F9ED600559D34 /* SearchView.swift in Sources */,
 				B7DF8682280F9EBB00559D34 /* FeedView.swift in Sources */,
 				B73A54F82810B1C8004A34A5 /* PostGridView.swift in Sources */,
+				B7053D0E281743B300849F4A /* RegistrationView.swift in Sources */,
+				B7053D122817621400849F4A /* CustomTextField.swift in Sources */,
 				B7DF8672280F9D8200559D34 /* ContentView.swift in Sources */,
 				B7DF865A280F9C9100559D34 /* InstagramCloneApp.swift in Sources */,
 				B71474F72813204500F5875B /* ProfileActionButtons.swift in Sources */,
+				B7053D10281743C800849F4A /* ResetPasswordView.swift in Sources */,
 				B7DF8686280F9EEA00559D34 /* NotificationsView.swift in Sources */,
 				B7053D092817269000849F4A /* ImagePicker.swift in Sources */,
 				B7DF868A280F9F9100559D34 /* UploadPostView.swift in Sources */,
@@ -347,11 +365,13 @@
 				B7DF8688280F9F7900559D34 /* ProfileView.swift in Sources */,
 				B71474F428131AE200F5875B /* UserStatView.swift in Sources */,
 				B73A54FA2811A5DD004A34A5 /* UserCell.swift in Sources */,
+				B7053D14281766B700849F4A /* CustomSecureField.swift in Sources */,
 				B73A54F62810AEAA004A34A5 /* SearchBar.swift in Sources */,
 				B7DF8680280F9E8E00559D34 /* MainTabView.swift in Sources */,
 				B7DF868C280FA9F800559D34 /* FeedCell.swift in Sources */,
 				B73A54FC2811A5E5004A34A5 /* UserListView.swift in Sources */,
 				B73A55022811D13E004A34A5 /* NotificationCell.swift in Sources */,
+				B7053D0C281743AC00849F4A /* LoginView.swift in Sources */,
 				B73A54FE2811B4E6004A34A5 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
