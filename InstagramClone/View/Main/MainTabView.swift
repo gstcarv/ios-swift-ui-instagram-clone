@@ -19,6 +19,17 @@ struct MainTabView: View {
     
     @State var selectedTab: MainTabs = .home
     
+    init() {
+        let navigationBarAppearence = UINavigationBarAppearance()
+        
+        navigationBarAppearence.configureWithOpaqueBackground()
+        navigationBarAppearence.backgroundColor = UIColor(named: "Gray")
+        
+        UINavigationBar.appearance().compactAppearance = navigationBarAppearence
+        UINavigationBar.appearance().standardAppearance = navigationBarAppearence
+        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearence
+    }
+    
     var body: some View {
         NavigationView {
             TabView (selection: $selectedTab) {
