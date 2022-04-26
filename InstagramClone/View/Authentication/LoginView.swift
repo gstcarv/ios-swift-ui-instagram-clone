@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct LoginView: View {
+    
+    @State private var email = ""
+    @State private var password = ""
+    
     var body: some View {
-                
         NavigationView {
             ZStack {
                 
@@ -28,8 +31,8 @@ struct LoginView: View {
                         .frame(width: 200, height: 80, alignment: .center)
                     
                     VStack {
-                        CustomTextField(text: .constant(""), placeholder: "Email", icon: "envelope")
-                        CustomSecureField(text: .constant(""), placeholder: "Password")
+                        CustomTextField(text: $email, placeholder: "Email", icon: "envelope")
+                        CustomSecureField(text: $password, placeholder: "Password")
                             .padding(.top, 10)
                     }
                     .padding(.horizontal, 30)
@@ -61,7 +64,9 @@ struct LoginView: View {
                     
                     Spacer()
                     
-                    Button(action: {}) {
+                    NavigationLink(
+                        destination: RegistrationView()
+                    ) {
                         Text("Don't have an account?")
                             .font(.system(size: 14, weight: .regular))
                             .foregroundColor(.white) +
@@ -73,7 +78,10 @@ struct LoginView: View {
                     .padding(.bottom, 15)
                 }
             }
+            .padding(.top, -22)
+            .navigationBarTitleDisplayMode(.inline)
         }
+        .accentColor(.white)
     }
 }
 
