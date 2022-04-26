@@ -60,7 +60,13 @@ struct RegistrationView: View {
                 .padding(.bottom, 25)
                 
                 Button(action: {
-                    viewModel.register(email: email, password: password)
+                    viewModel.register(
+                        email: email,
+                        password: password,
+                        username: username,
+                        fullname: fullname,
+                        photo: selectedProfilePhoto!
+                    )
                 }) {
                     Text("Sign Up")
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 10)

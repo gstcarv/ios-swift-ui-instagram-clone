@@ -30,6 +30,7 @@
 		B73A54FC2811A5E5004A34A5 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A54FB2811A5E5004A34A5 /* UserListView.swift */; };
 		B73A54FE2811B4E6004A34A5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A54FD2811B4E6004A34A5 /* Extensions.swift */; };
 		B73A55022811D13E004A34A5 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A55012811D13E004A34A5 /* NotificationCell.swift */; };
+		B75A554B281866CF008539DA /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75A554A281866CF008539DA /* ImageUploader.swift */; };
 		B7DF865A280F9C9100559D34 /* InstagramCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DF8659280F9C9100559D34 /* InstagramCloneApp.swift */; };
 		B7DF865E280F9C9400559D34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7DF865D280F9C9400559D34 /* Assets.xcassets */; };
 		B7DF8661280F9C9400559D34 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7DF8660280F9C9400559D34 /* Preview Assets.xcassets */; };
@@ -62,6 +63,7 @@
 		B73A54FB2811A5E5004A34A5 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		B73A54FD2811B4E6004A34A5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B73A55012811D13E004A34A5 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		B75A554A281866CF008539DA /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		B7DF8656280F9C9100559D34 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7DF8659280F9C9100559D34 /* InstagramCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCloneApp.swift; sourceTree = "<group>"; };
 		B7DF865D280F9C9400559D34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		B7DF866D280F9D2200559D34 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				B75A554A281866CF008539DA /* ImageUploader.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				B73A54F82810B1C8004A34A5 /* PostGridView.swift in Sources */,
 				B7053D0E281743B300849F4A /* RegistrationView.swift in Sources */,
 				B7053D122817621400849F4A /* CustomTextField.swift in Sources */,
+				B75A554B281866CF008539DA /* ImageUploader.swift in Sources */,
 				B7DF8672280F9D8200559D34 /* ContentView.swift in Sources */,
 				B7DF865A280F9C9100559D34 /* InstagramCloneApp.swift in Sources */,
 				B71474F72813204500F5875B /* ProfileActionButtons.swift in Sources */,
