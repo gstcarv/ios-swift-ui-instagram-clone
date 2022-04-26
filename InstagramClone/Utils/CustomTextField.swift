@@ -29,7 +29,9 @@ struct CustomTextField: View {
                 
                 TextField("", text: $text)
                     .foregroundColor(.white)
+                    .autocapitalization(.none)
                     .padding(.leading, 10)
+                    .textInputAutocapitalization(.none)
             }
             .padding()
             .padding(.horizontal, 5)

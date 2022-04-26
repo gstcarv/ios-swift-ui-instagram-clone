@@ -19,6 +19,8 @@ struct RegistrationView: View {
     @State var showPhotoPicker = false;
     @State var selectedProfilePhoto: UIImage?;
     
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
         ZStack {
             
@@ -57,7 +59,9 @@ struct RegistrationView: View {
                 .padding(.top, 15)
                 .padding(.bottom, 25)
                 
-                Button(action: {}) {
+                Button(action: {
+                    viewModel.register(email: email, password: password)
+                }) {
                     Text("Sign Up")
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 10)
                         .font(.system(size: 14, weight: .semibold))

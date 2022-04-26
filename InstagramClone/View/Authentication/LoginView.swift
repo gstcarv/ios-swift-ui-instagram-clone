@@ -51,7 +51,9 @@ struct LoginView: View {
                     .padding(.vertical, 20)
                     
         
-                    Button(action: {}) {
+                    Button(action: {
+                        AuthViewModel.shared.login(email: email, password: password)
+                    }) {
                         Text("Sign In")
                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 10)
                             .font(.system(size: 14, weight: .semibold))

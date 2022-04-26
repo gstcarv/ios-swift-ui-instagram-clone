@@ -20,14 +20,14 @@ struct MainTabView: View {
     @State var selectedTab: MainTabs = .home
     
     init() {
-        let navigationBarAppearence = UINavigationBarAppearance()
-        
-        navigationBarAppearence.configureWithOpaqueBackground()
-        navigationBarAppearence.backgroundColor = UIColor(named: "Gray")
-        
-        UINavigationBar.appearance().compactAppearance = navigationBarAppearence
-        UINavigationBar.appearance().standardAppearance = navigationBarAppearence
-        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearence
+//        let navigationBarAppearence = UINavigationBarAppearance()
+//        
+//        navigationBarAppearence.configureWithOpaqueBackground()
+//        navigationBarAppearence.backgroundColor = UIColor(named: "Gray")
+//        
+//        UINavigationBar.appearance().compactAppearance = navigationBarAppearence
+//        UINavigationBar.appearance().standardAppearance = navigationBarAppearence
+//        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearence
     }
     
     var body: some View {
@@ -71,6 +71,16 @@ struct MainTabView: View {
             .navigationTitle(selectedTab.rawValue)
             .accentColor(.black)
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(leading: logoutButton)
+        }
+    }
+    
+    var logoutButton: some View {
+        Button(action: {
+            AuthViewModel.shared.signOut()
+        }) {
+            Text("Logout")
+                .foregroundColor(.black)
         }
     }
 }
