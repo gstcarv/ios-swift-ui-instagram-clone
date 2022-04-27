@@ -45,6 +45,7 @@
 		B7F0A6452819702200B90248 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = B7F0A6442819702200B90248 /* FirebaseFunctions */; };
 		B7F0A6472819702200B90248 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = B7F0A6462819702200B90248 /* FirebaseMessaging */; };
 		B7F0A6492819702200B90248 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B7F0A6482819702200B90248 /* FirebaseStorage */; };
+		B7F0A64B2819B56B00B90248 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F0A64A2819B56B00B90248 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		B7DF8687280F9F7900559D34 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		B7DF8689280F9F9100559D34 /* UploadPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostView.swift; sourceTree = "<group>"; };
 		B7DF868B280FA9F800559D34 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		B7F0A64A2819B56B00B90248 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				B7DF867D280F9E0900559D34 /* Authentication */,
 				B7DF867C280F9E0500559D34 /* Profile */,
 				B7DF867B280F9E0100559D34 /* Feed */,
+				B7F0A64A2819B56B00B90248 /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				B7DF8688280F9F7900559D34 /* ProfileView.swift in Sources */,
 				B71474F428131AE200F5875B /* UserStatView.swift in Sources */,
 				B73A54FA2811A5DD004A34A5 /* UserCell.swift in Sources */,
+				B7F0A64B2819B56B00B90248 /* SearchViewModel.swift in Sources */,
 				B7053D14281766B700849F4A /* CustomSecureField.swift in Sources */,
 				B73A54F62810AEAA004A34A5 /* SearchBar.swift in Sources */,
 				B75A556B2819693D008539DA /* User.swift in Sources */,
