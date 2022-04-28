@@ -61,7 +61,7 @@ struct MainTabView: View {
                     }
                     .tag(MainTabs.notifications)
                 
-                ProfileView()
+                ProfileView(user: AuthViewModel.shared.currentUser!)
                     .tabItem {
                         Image(systemName: "person")
                             .environment(\.symbolVariants, .none)

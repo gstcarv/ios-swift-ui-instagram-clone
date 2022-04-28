@@ -11,12 +11,12 @@ import Firebase
 class AuthViewModel: ObservableObject {
     
     @Published var userSession: FirebaseAuth.User?
+    @Published var currentUser: User?
     
     static let shared = AuthViewModel()
     
     init () {
         userSession = Auth.auth().currentUser
-        
         fetchUser()
     }
     
@@ -29,6 +29,8 @@ class AuthViewModel: ObservableObject {
             guard let user = result?.user else { return }
             
             self.userSession = user;
+            
+            self.fetchUser()
         }
     }
     
@@ -60,6 +62,8 @@ class AuthViewModel: ObservableObject {
                     // Set the user session
                     self.userSession = user;
                 }
+                
+                self.fetchUser()
             }
         }
 
@@ -71,8 +75,14 @@ class AuthViewModel: ObservableObject {
     }
     
     func fetchUser() {
+        
+        if userSession == nil {
+            return
+        }
+        
         FIRUsersCollection.document(userSession!.uid).getDocument { snapshot, _ in
             guard let user = try? snapshot?.data(as: User.self) else { return }
+            self.currentUser = user;
         }
     }
     

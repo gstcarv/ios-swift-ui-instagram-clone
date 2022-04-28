@@ -15,7 +15,7 @@ struct ContentView: View {
         Group {
             if viewModel.userSession == nil {
                 LoginView()
-            } else {
+            } else if viewModel.currentUser != nil {
                 MainTabView()
             }
         }
