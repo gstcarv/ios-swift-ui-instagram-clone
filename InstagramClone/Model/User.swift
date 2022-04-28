@@ -15,5 +15,7 @@ struct User: Identifiable, Decodable {
     let profileImageUrl: String
     let fullname: String
     
+    var isFollowedByCurrentUser: Bool? = false;
+    
     var isCurrentUser: Bool { return AuthViewModel.shared.userSession?.uid == id }
 }

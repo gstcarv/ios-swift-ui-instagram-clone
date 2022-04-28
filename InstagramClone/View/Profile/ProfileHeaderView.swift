@@ -10,7 +10,9 @@ import Kingfisher
 
 struct ProfileHeaderView: View {
     
-    var user: User;
+    @ObservedObject var viewModel: ProfileViewModel
+    
+    var user: User { return viewModel.user }
     
     var body: some View {
         VStack {
@@ -40,17 +42,9 @@ struct ProfileHeaderView: View {
                     .padding(.top, -3)
             }
             
-            ProfileActionButtons(isCurrentUser: user.isCurrentUser)
+            ProfileActionButtons(viewModel: viewModel)
             
         }
         .padding(.horizontal, 20)
-    }
-}
-
-struct ProfileHeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileHeaderView(
-            user: User(id: "123", username: "john.doe", email: "john.doe", profileImageUrl: "ProfileImage", fullname: "Steve Jobs")
-        )
     }
 }
