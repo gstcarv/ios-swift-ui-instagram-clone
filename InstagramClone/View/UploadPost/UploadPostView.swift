@@ -9,21 +9,25 @@ import SwiftUI
 
 struct UploadPostView: View {
     
+    @Binding var selectedTab: MainTabs;
+    
     @State var selectedImage: UIImage?
-    @State var captionText = ""
     @State var showImagePicker = false;
+    
+    @ObservedObject var viewModel = UploadPostViewModel()
+    
+    @State var showDetailsView: Bool = false;
     
     var body: some View {
         VStack {
-            if (selectedImage == nil) {
-                VStack (alignment: .leading) {
-                    Button(action: { showImagePicker.toggle() }, label: {
-                        Text("Upload image")
-                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50)
-                            .background(.black)
-                            .foregroundColor(.white)
-                            .cornerRadius(8)
-                    })
+            VStack (alignment: .leading) {
+                Button(action: { showImagePicker.toggle() }, label: {
+                    Text("Upload image")
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50)
+                        .background(.black)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                })
                     .padding()
                     .sheet(
                         isPresented: $showImagePicker,
@@ -31,30 +35,18 @@ struct UploadPostView: View {
                         content: {
                             ImagePicker(image: $selectedImage)
                         })
-                }
-            } else {
-                HStack (alignment: .top) {
-                    Image(uiImage: $selectedImage.wrappedValue!)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 96, height: 96)
-                        .clipped()
-                    
-                    TextField("Enter the caption...", text: $captionText)
-                        .frame(height: 96, alignment: .leading)
-                        .multilineTextAlignment(.leading)
-                    
-                }.padding()
-                
-                Button(action: {}, label: {
-                    Text("Upload image")
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50)
-                        .background(.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                }).padding(.horizontal, 15)
-               
             }
+            
+            NavigationLink(destination:
+               PostDetailsView(
+                    viewModel: viewModel,
+                    selectedImage: $selectedImage,
+                    selectedTab: $selectedTab
+               ),
+               isActive: $showDetailsView) {
+                 EmptyView()
+            }.hidden()
+
             
             Spacer()
         }
@@ -63,17 +55,8 @@ struct UploadPostView: View {
 
 extension UploadPostView {
     func loadImage() {
-        
-        print("image was selected")
-        
         guard let selectedImage = selectedImage else { return }
     
-        print(selectedImage.size)
-    }
-}
-
-struct UploadPostView_Previews: PreviewProvider {
-    static var previews: some View {
-        UploadPostView()
+        showDetailsView = true
     }
 }

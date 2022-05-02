@@ -14,9 +14,9 @@
             filePath = "InstagramClone/API/ImageUploader.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "uploadImage(image:completion:)"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "uploadImage(image:type:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

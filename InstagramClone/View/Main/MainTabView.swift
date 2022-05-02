@@ -47,7 +47,7 @@ struct MainTabView: View {
                     }
                     .tag(MainTabs.search)
                 
-                UploadPostView()
+                UploadPostView(selectedTab: $selectedTab)
                     .tabItem {
                         Image(systemName: "plus.square")
                             .environment(\.symbolVariants, .none)

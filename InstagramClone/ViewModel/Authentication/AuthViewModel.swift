@@ -39,7 +39,7 @@ class AuthViewModel: ObservableObject {
         guard let photo = photo else { return }
         
         // Try to send profile picture to storage
-        ImageUploader.uploadImage(image: photo) { photoURL in
+        ImageUploader.uploadImage(image: photo, type: .profile) { photoURL in
             
             // Try to create user on auth
             Auth.auth().createUser(withEmail: email, password: password) { result, error in

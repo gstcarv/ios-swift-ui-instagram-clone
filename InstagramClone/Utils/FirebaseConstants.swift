@@ -12,3 +12,5 @@ let FIRUsersCollection = Firestore.firestore().collection("users")
 let FIRFollowersCollection = Firestore.firestore().collection("followers")
 
 let FIRFollowingCollection = Firestore.firestore().collection("following")
+
+let FIRPostsCollection = Firestore.firestore().collection("posts")
