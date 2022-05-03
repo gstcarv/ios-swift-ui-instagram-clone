@@ -10,7 +10,14 @@ import Kingfisher
 
 struct FeedCell: View {
     
-    var post: Post;
+    @ObservedObject var viewModel: FeedCellViewModel
+    
+    var post: Post { return viewModel.post }
+    var didLike: Bool { return post.userDidLike ?? false }
+    
+    init (post: Post) {
+        viewModel = FeedCellViewModel(post: post)
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -36,9 +43,16 @@ struct FeedCell: View {
                 .clipped()
             
             HStack (spacing: 12){
-                Button(action: {}, label: {
-                    Image(systemName: "heart")
+                Button(action: {
+                    if didLike {
+                        viewModel.unlike()
+                    } else {
+                        viewModel.like()
+                    }
+                }, label: {
+                    Image(systemName: didLike ? "heart.fill" : "heart")
                         .resizable()
+                        .foregroundColor(didLike ? .red : .black)
                         .scaledToFill()
                         .frame(width: 20, height: 20)
                 })
@@ -80,14 +94,6 @@ struct FeedCell: View {
                 .foregroundColor(.gray)
                 .padding(.leading, 10)
                 .padding(.top, -4)
-            
-            
-            
-            // post image
-            
-            // action buttons
-            
-            // caption
         }
     }
 }
