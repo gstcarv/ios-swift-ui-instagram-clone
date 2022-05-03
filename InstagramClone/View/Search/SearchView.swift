@@ -23,7 +23,7 @@ struct SearchView: View {
                 if isSearching {
                     UserListView(searchText: $searchText, viewModel: viewModel)
                 } else {
-                    PostGridView()
+                    PostGridView(config: .explore)
                 }
             }
             

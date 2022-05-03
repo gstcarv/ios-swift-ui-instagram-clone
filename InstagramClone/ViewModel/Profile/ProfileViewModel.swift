@@ -8,10 +8,11 @@
 import Foundation
 
 class ProfileViewModel: ObservableObject {
-    @Published var user: User;
+    @Published var user: User
+    @Published var posts = [Post]()
     
     init (user: User) {
-        self.user = user;
+        self.user = user
         
         checkIfUserIsFollowed()
     }
@@ -50,6 +51,10 @@ class ProfileViewModel: ObservableObject {
         UserService.checkIfUserIsFollowed(uid: uid) { isFollowed in
             self.user.isFollowedByCurrentUser = isFollowed
         }
+    }
+    
+    func fetchPosts() {
+        
     }
 
 }
