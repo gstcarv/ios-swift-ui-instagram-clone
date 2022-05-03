@@ -6,29 +6,33 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct FeedCell: View {
+    
+    var post: Post;
+    
     var body: some View {
         VStack(alignment: .leading) {
             
             // user information
             HStack {
-                Image("ProfileImage")
+                KFImage(URL(string: post.ownerImageUrl))
                     .resizable()
                     .scaledToFill()
                     .frame(width: 36, height: 36)
                     .clipped()
                     .cornerRadius(18)
                 
-                Text("Joker")
+                Text(post.ownerUsername)
                     .font(.system(size: 14, weight: .semibold))
             }
             .padding(10)
             
-            Image("PostImage")
+            KFImage(URL(string: post.imageUrl))
                 .resizable()
                 .scaledToFill()
-                .frame(maxHeight: 200)
+                .frame(maxHeight: 450)
                 .clipped()
             
             HStack (spacing: 12){
@@ -56,17 +60,17 @@ struct FeedCell: View {
             .padding([.leading, .top], 10)
             .foregroundColor(.black)
             
-            Text("2 likes")
+            Text("\(post.likes) likes")
                 .font(.system(size: 14, weight: .semibold))
                 .foregroundColor(.black)
                 .padding([.top, .bottom], 3)
                 .padding(.leading, 10)
             
             HStack {
-                Text("batman")
+                Text(post.ownerUsername + " ")
                     .font(.system(size: 14, weight: .semibold)) +
                 
-                Text(" lorem ipsum dolor sit amet hello world this is my longer text yeee hello testing ok ok")
+                Text(post.caption)
                     .font(.system(size: 14, weight: .regular))
             }
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
@@ -85,11 +89,5 @@ struct FeedCell: View {
             
             // caption
         }
-    }
-}
-
-struct FeedCell_Previews: PreviewProvider {
-    static var previews: some View {
-        FeedCell()
     }
 }
