@@ -15,6 +15,7 @@ class NotificationCellViewModel: ObservableObject {
         
         checkIfUserIsFollowed()
         fetchNotificationPost()
+        fetchNotificationUser()
     }
     
     func follow() {
@@ -61,4 +62,9 @@ class NotificationCellViewModel: ObservableObject {
         }
     }
     
+    func fetchNotificationUser() {
+        FIRUsersCollection.document(notification.uid).getDocument { snapshot, error in
+            self.notification.user = try? snapshot?.data(as: User.self)
+        }
+    }
 }
