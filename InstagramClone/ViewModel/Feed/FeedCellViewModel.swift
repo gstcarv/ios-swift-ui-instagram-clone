@@ -29,6 +29,8 @@ class FeedCellViewModel: ObservableObject {
                     self.post.likes -= 1
                 } else {
                     FIRPostsCollection.document(self.post.id!).updateData(["likes": self.post.likes])
+                    
+                    NotificationsViewModel.uploadNotification(toUid: self.post.ownerUid, type: .like, post: self.post)
                 }
             }
     }

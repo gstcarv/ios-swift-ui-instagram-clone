@@ -44,7 +44,11 @@ class CommentViewModel: ObservableObject {
             "commentText": commentText
         ] as [String : Any]
         
-        FIRPostsCollection.document(post.id!).collection("comments").addDocument(data: data)
+        FIRPostsCollection.document(post.id!).collection("comments").addDocument(data: data) { error in
+            if error == nil {
+                NotificationsViewModel.uploadNotification(toUid: self.post.ownerUid, type: .comment, post: self.post)
+            }
+        }
         
         var comment = Comment(
             username: user.username,

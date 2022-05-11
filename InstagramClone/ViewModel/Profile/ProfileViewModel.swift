@@ -25,6 +25,8 @@ class ProfileViewModel: ObservableObject {
         UserService.follow(uid: uid) { error in
             if error != nil {
                 self.user.isFollowedByCurrentUser = false
+            } else {
+                NotificationsViewModel.uploadNotification(toUid: uid, type: .follow)
             }
         }
     }
@@ -52,9 +54,4 @@ class ProfileViewModel: ObservableObject {
             self.user.isFollowedByCurrentUser = isFollowed
         }
     }
-    
-    func fetchPosts() {
-        
-    }
-
 }

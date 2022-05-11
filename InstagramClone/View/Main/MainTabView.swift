@@ -71,7 +71,7 @@ struct MainTabView: View {
             .navigationTitle(selectedTab.rawValue)
             .accentColor(.black)
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(leading: logoutButton)
+            .navigationBarItems(leading: selectedTab == .profile ? logoutButton : nil)
         }
     }
     

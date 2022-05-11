@@ -30,6 +30,9 @@
 		B73A54FC2811A5E5004A34A5 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A54FB2811A5E5004A34A5 /* UserListView.swift */; };
 		B73A54FE2811B4E6004A34A5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A54FD2811B4E6004A34A5 /* Extensions.swift */; };
 		B73A55022811D13E004A34A5 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A55012811D13E004A34A5 /* NotificationCell.swift */; };
+		B74EDA16282C5391002906DB /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EDA15282C5391002906DB /* Notification.swift */; };
+		B74EDA18282C5493002906DB /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EDA17282C5493002906DB /* NotificationsViewModel.swift */; };
+		B74EDA1A282C5E1B002906DB /* NotificationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EDA19282C5E1B002906DB /* NotificationCellViewModel.swift */; };
 		B75A554B281866CF008539DA /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75A554A281866CF008539DA /* ImageUploader.swift */; };
 		B75A5569281967F5008539DA /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75A5568281967F5008539DA /* FirebaseConstants.swift */; };
 		B75A556B2819693D008539DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75A556A2819693D008539DA /* User.swift */; };
@@ -87,6 +90,9 @@
 		B73A54FB2811A5E5004A34A5 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		B73A54FD2811B4E6004A34A5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B73A55012811D13E004A34A5 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		B74EDA15282C5391002906DB /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		B74EDA17282C5493002906DB /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
+		B74EDA19282C5E1B002906DB /* NotificationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCellViewModel.swift; sourceTree = "<group>"; };
 		B75A554A281866CF008539DA /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		B75A5568281967F5008539DA /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		B75A556A2819693D008539DA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -196,6 +202,7 @@
 				B75A556A2819693D008539DA /* User.swift */,
 				B7B5A5BD282156F70021139D /* Post.swift */,
 				B7073A5E28255F23009ACAF4 /* Comment.swift */,
+				B74EDA15282C5391002906DB /* Notification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -352,6 +359,8 @@
 		B7DF867E280F9E0E00559D34 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				B74EDA17282C5493002906DB /* NotificationsViewModel.swift */,
+				B74EDA19282C5E1B002906DB /* NotificationCellViewModel.swift */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -448,9 +457,12 @@
 				B7053D0E281743B300849F4A /* RegistrationView.swift in Sources */,
 				B7053D122817621400849F4A /* CustomTextField.swift in Sources */,
 				B7073A6328255F42009ACAF4 /* CommentsView.swift in Sources */,
+				B74EDA1A282C5E1B002906DB /* NotificationCellViewModel.swift in Sources */,
 				B75A554B281866CF008539DA /* ImageUploader.swift in Sources */,
 				B7DF8672280F9D8200559D34 /* ContentView.swift in Sources */,
 				B7DF865A280F9C9100559D34 /* InstagramCloneApp.swift in Sources */,
+				B74EDA18282C5493002906DB /* NotificationsViewModel.swift in Sources */,
+				B74EDA16282C5391002906DB /* Notification.swift in Sources */,
 				B71474F72813204500F5875B /* ProfileActionButtons.swift in Sources */,
 				B7053D10281743C800849F4A /* ResetPasswordView.swift in Sources */,
 				B7DF8686280F9EEA00559D34 /* NotificationsView.swift in Sources */,
