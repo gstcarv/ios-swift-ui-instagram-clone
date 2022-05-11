@@ -57,13 +57,15 @@ struct FeedCell: View {
                         .frame(width: 20, height: 20)
                 })
                 
-                Button(action: {}) {
+                NavigationLink {
+                    CommentsView(post: viewModel.post)
+                } label: {
                     Image(systemName: "bubble.right")
                         .resizable()
                         .scaledToFill()
                         .frame(width: 20, height: 20)
                 }
-                
+
                 Button(action: {}) {
                     Image(systemName: "paperplane")
                         .resizable()
