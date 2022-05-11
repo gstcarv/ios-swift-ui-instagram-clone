@@ -57,7 +57,7 @@ struct NotificationCell: View {
                         .cornerRadius(3)
                 }
             } else {
-                KFImage(URL(string: "ProfileImage"))
+                KFImage(URL(string: viewModel.notification.post?.imageUrl ?? ""))
                     .resizable()
                     .scaledToFill()
                     .frame(width: 40, height: 40)

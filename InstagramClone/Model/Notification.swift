@@ -19,6 +19,8 @@ struct Notification: Identifiable, Decodable {
     let uid: String
     
     var userIsFollowed: Bool?
+    var post: Post?
+    var user: User?
 }
 
 enum NotificationType: Int, Decodable {
