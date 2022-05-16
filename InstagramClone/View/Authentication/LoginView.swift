@@ -12,6 +12,17 @@ struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
     
+    init() {
+        let navigationBarAppearence = UINavigationBarAppearance()
+        
+        navigationBarAppearence.configureWithTransparentBackground()
+        navigationBarAppearence.backgroundColor = UIColor(named: "transparent")
+        
+        UINavigationBar.appearance().compactAppearance = navigationBarAppearence
+        UINavigationBar.appearance().standardAppearance = navigationBarAppearence
+        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearence
+    }
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -84,6 +95,7 @@ struct LoginView: View {
             .navigationBarTitleDisplayMode(.inline)
         }
         .accentColor(.white)
+        .preferredColorScheme(.dark)
     }
 }
 
