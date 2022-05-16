@@ -20,18 +20,18 @@ struct PostGridView: View {
         self.viewModel = PostGridViewModel(config: config)
     }
     
-    
     var body: some View {
         LazyVGrid(columns: items, spacing: 2) {
             ForEach(viewModel.posts) { post in
                 NavigationLink {
-                    FeedView()
+                    FeedCell(post: post)
                 } label: {
                     KFImage(URL(string: post.imageUrl))
                         .resizable()
                         .scaledToFill()
                         .frame(width: width, height: width)
-                    .clipped()
+                        .background(Color(red: 0, green: 0, blue: 0, opacity: 0.2))
+                        .clipped()
                 }
 
             }

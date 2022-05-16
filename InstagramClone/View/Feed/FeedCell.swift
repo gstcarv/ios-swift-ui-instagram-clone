@@ -38,11 +38,12 @@ struct FeedCell: View {
             
             KFImage(URL(string: post.imageUrl))
                 .resizable()
+                .background(Color(red: 0, green: 0, blue: 0, opacity: 0.2))
                 .scaledToFill()
                 .frame(maxHeight: 450)
                 .clipped()
             
-            HStack (spacing: 12){
+            HStack (spacing: 18){
                 Button(action: {
                     if didLike {
                         viewModel.unlike()
