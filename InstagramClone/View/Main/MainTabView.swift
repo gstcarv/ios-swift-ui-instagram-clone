@@ -68,10 +68,17 @@ struct MainTabView: View {
                     }
                     .tag(MainTabs.profile)
             }
-            .navigationTitle(selectedTab.rawValue)
             .accentColor(.black)
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(leading: selectedTab == .profile ? logoutButton : nil)
+            .navigationBarItems(
+                leading: Image("ToolbarLogo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100, height: 43, alignment: .trailing)
+                    .padding(.leading, -10),
+                trailing: selectedTab == .profile ? logoutButton : nil
+            )
+            
         }
     }
     
