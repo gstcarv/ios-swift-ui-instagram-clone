@@ -24,7 +24,7 @@ struct PostGridView: View {
         LazyVGrid(columns: items, spacing: 2) {
             ForEach(viewModel.posts) { post in
                 NavigationLink {
-                    FeedCell(post: post)
+                    FeedView(viewModel: FeedViewModel(), mainPost: post)
                 } label: {
                     KFImage(URL(string: post.imageUrl))
                         .resizable()

@@ -23,7 +23,7 @@ struct NotificationCell: View {
     
     private var linkDestination: some View {
         if notification.type == .like {
-            return AnyView(FeedCell(post: notification.post!))
+            return AnyView(FeedView(viewModel: FeedViewModel(), mainPost: notification.post))
         } else if notification.type == .comment {
             return AnyView(CommentsView(post: notification.post!))
         }
