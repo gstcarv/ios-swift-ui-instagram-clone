@@ -10,6 +10,10 @@ import Foundation
 class FeedCellViewModel: ObservableObject {
     @Published var post: Post;
     
+    var timestampString: String {
+        return DateUtils.abbreviateDate(date: post.timestamp)
+    }
+    
     init(post: Post) {
         self.post = post;
         

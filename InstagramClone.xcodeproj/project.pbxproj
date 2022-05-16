@@ -33,6 +33,7 @@
 		B74EDA16282C5391002906DB /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EDA15282C5391002906DB /* Notification.swift */; };
 		B74EDA18282C5493002906DB /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EDA17282C5493002906DB /* NotificationsViewModel.swift */; };
 		B74EDA1A282C5E1B002906DB /* NotificationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EDA19282C5E1B002906DB /* NotificationCellViewModel.swift */; };
+		B74EDA1C2832E101002906DB /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EDA1B2832E101002906DB /* DateUtils.swift */; };
 		B75A554B281866CF008539DA /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75A554A281866CF008539DA /* ImageUploader.swift */; };
 		B75A5569281967F5008539DA /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75A5568281967F5008539DA /* FirebaseConstants.swift */; };
 		B75A556B2819693D008539DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75A556A2819693D008539DA /* User.swift */; };
@@ -93,6 +94,7 @@
 		B74EDA15282C5391002906DB /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		B74EDA17282C5493002906DB /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
 		B74EDA19282C5E1B002906DB /* NotificationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCellViewModel.swift; sourceTree = "<group>"; };
+		B74EDA1B2832E101002906DB /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		B75A554A281866CF008539DA /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		B75A5568281967F5008539DA /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		B75A556A2819693D008539DA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				B7053D13281766B700849F4A /* CustomSecureField.swift */,
 				B75A5568281967F5008539DA /* FirebaseConstants.swift */,
 				B7B5A5B928206ED80021139D /* TextArea.swift */,
+				B74EDA1B2832E101002906DB /* DateUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				B71474F228130C8A00F5875B /* ProfileHeaderView.swift in Sources */,
 				B7073A6128255F2E009ACAF4 /* CommentVIewModel.swift in Sources */,
 				B75A5569281967F5008539DA /* FirebaseConstants.swift in Sources */,
+				B74EDA1C2832E101002906DB /* DateUtils.swift in Sources */,
 				B7DF8688280F9F7900559D34 /* ProfileView.swift in Sources */,
 				B7B5A5C42821744C0021139D /* PostGridViewModel.swift in Sources */,
 				B7B5A5BE282156F70021139D /* Post.swift in Sources */,

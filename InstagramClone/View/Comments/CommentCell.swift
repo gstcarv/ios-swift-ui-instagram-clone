@@ -11,6 +11,10 @@ import Kingfisher
 struct CommentCell: View {
     let comment: Comment;
     
+    var timestampString: String {
+        return DateUtils.abbreviateDate(date: comment.timestamp)
+    }
+    
     var body: some View {
         HStack (alignment: .top) {
             KFImage(URL(string: comment.profileImageUrl))
@@ -26,7 +30,7 @@ struct CommentCell: View {
                 Text(comment.commentText)
                     .font(.system(size: 14, weight: .regular))
                 
-                Text("33 min")
+                Text(timestampString)
                     .font(.system(size: 14, weight: .medium))
                     .foregroundColor(.gray)
                     .padding(.top, -6)
