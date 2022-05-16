@@ -26,9 +26,9 @@ struct ProfileHeaderView: View {
                 Spacer()
 
                 HStack {
-                    UserStatView(title: "Posts", value: .constant(10))
-                    UserStatView(title: "Followers", value: .constant(1000))
-                    UserStatView(title: "Following", value: .constant(20))
+                    UserStatView(title: "Posts", value: viewModel.userStats.posts)
+                    UserStatView(title: "Followers", value: viewModel.userStats.followers)
+                    UserStatView(title: "Following", value: viewModel.userStats.following)
                 }
             }
             

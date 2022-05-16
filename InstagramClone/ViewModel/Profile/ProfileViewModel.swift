@@ -10,11 +10,13 @@ import Foundation
 class ProfileViewModel: ObservableObject {
     @Published var user: User
     @Published var posts = [Post]()
+    @Published var userStats: UserStats = UserStats(following: 0, posts: 0, followers: 0)
     
     init (user: User) {
         self.user = user
         
         checkIfUserIsFollowed()
+        fetchUserStats()
     }
     
     func follow() {
@@ -52,6 +54,24 @@ class ProfileViewModel: ObservableObject {
         
         UserService.checkIfUserIsFollowed(uid: uid) { isFollowed in
             self.user.isFollowedByCurrentUser = isFollowed
+        }
+    }
+    
+    func fetchUserStats () {
+        guard let uid = user.id else { return }
+        
+        FIRFollowingCollection.document(uid).collection("user-following").getDocuments { snapshot, Error in
+            guard let following = snapshot?.documents.count else { return }
+            
+            FIRFollowersCollection.document(uid).collection("user-followers").getDocuments { snapshot, Error in
+                guard let followers = snapshot?.documents.count else { return }
+                
+                FIRPostsCollection.whereField("ownerUid", isEqualTo: uid).getDocuments { snapshot, Error in
+                    guard let posts = snapshot?.documents.count else { return }
+                    
+                    self.userStats = UserStats(following: following, posts: posts, followers: followers)
+                }
+            }
         }
     }
 }

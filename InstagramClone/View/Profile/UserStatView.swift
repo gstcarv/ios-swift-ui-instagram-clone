@@ -9,11 +9,11 @@ import SwiftUI
 
 struct UserStatView: View {
     var title: String!;
-    @Binding var value: Int!;
+    var value: Int!;
     
     var body: some View {
         VStack {
-            Text(String(value))
+            Text(String(value ?? 0))
                 .font(.system(size: 18, weight: .semibold))
             
             Text(String(title))
@@ -25,6 +25,6 @@ struct UserStatView: View {
 
 struct UserStatView_Previews: PreviewProvider {
     static var previews: some View {
-        UserStatView(title: "Title", value: .constant(10))
+        UserStatView(title: "Title", value: 10)
     }
 }
