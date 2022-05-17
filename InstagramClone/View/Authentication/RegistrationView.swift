@@ -19,7 +19,7 @@ struct RegistrationView: View {
     @State var showPhotoPicker = false;
     @State var selectedProfilePhoto: UIImage?;
     
-    @EnvironmentObject var viewModel: AuthViewModel
+    @ObservedObject var viewModel: RegisterViewModel = RegisterViewModel()
     
     var body: some View {
         ZStack {
@@ -59,23 +59,26 @@ struct RegistrationView: View {
                 .padding(.top, 15)
                 .padding(.bottom, 25)
                 
-                Button(action: {
-                    viewModel.register(
-                        email: email,
-                        password: password,
-                        username: username,
-                        fullname: fullname,
-                        photo: selectedProfilePhoto!
-                    )
-                }) {
-                    Text("Sign Up")
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 10)
-                        .font(.system(size: 14, weight: .semibold))
-                        .padding(15)
-                        .foregroundColor(.blue)
-                        .background(.white)
-                        .cornerRadius(100)
-                }
+                CustomButton(
+                    action: {
+                        viewModel.register(
+                            email: email,
+                            password: password,
+                            username: username,
+                            fullname: fullname,
+                            photo: selectedProfilePhoto!)
+                    },
+                    label: {
+                        Text("Sign Up")
+                            .font(.system(size: 14, weight: .semibold))
+                    },
+                    loading: viewModel.isRegistering
+                )
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 10)
+                .padding(15)
+                .foregroundColor(.blue)
+                .background(.white)
+                .cornerRadius(100)
                 .padding(.horizontal, 30)
                 
                 Spacer()
@@ -99,8 +102,3 @@ struct RegistrationView: View {
     }
 }
 
-struct RegistrationView_Previews: PreviewProvider {
-    static var previews: some View {
-        RegistrationView()
-    }
-}

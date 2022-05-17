@@ -34,6 +34,9 @@
 		B74EDA18282C5493002906DB /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EDA17282C5493002906DB /* NotificationsViewModel.swift */; };
 		B74EDA1A282C5E1B002906DB /* NotificationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EDA19282C5E1B002906DB /* NotificationCellViewModel.swift */; };
 		B74EDA1C2832E101002906DB /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EDA1B2832E101002906DB /* DateUtils.swift */; };
+		B74EDA1E283341C4002906DB /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EDA1D283341C4002906DB /* CustomButton.swift */; };
+		B74EDA2228334438002906DB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EDA2128334438002906DB /* LoginViewModel.swift */; };
+		B74EDA242833464D002906DB /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EDA232833464D002906DB /* RegisterViewModel.swift */; };
 		B75A554B281866CF008539DA /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75A554A281866CF008539DA /* ImageUploader.swift */; };
 		B75A5569281967F5008539DA /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75A5568281967F5008539DA /* FirebaseConstants.swift */; };
 		B75A556B2819693D008539DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75A556A2819693D008539DA /* User.swift */; };
@@ -95,6 +98,9 @@
 		B74EDA17282C5493002906DB /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
 		B74EDA19282C5E1B002906DB /* NotificationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCellViewModel.swift; sourceTree = "<group>"; };
 		B74EDA1B2832E101002906DB /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		B74EDA1D283341C4002906DB /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		B74EDA2128334438002906DB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B74EDA232833464D002906DB /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		B75A554A281866CF008539DA /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		B75A5568281967F5008539DA /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		B75A556A2819693D008539DA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -234,6 +240,7 @@
 				B75A5568281967F5008539DA /* FirebaseConstants.swift */,
 				B7B5A5B928206ED80021139D /* TextArea.swift */,
 				B74EDA1B2832E101002906DB /* DateUtils.swift */,
+				B74EDA1D283341C4002906DB /* CustomButton.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -355,6 +362,8 @@
 			isa = PBXGroup;
 			children = (
 				B7053D2528182F7B00849F4A /* AuthViewModel.swift */,
+				B74EDA2128334438002906DB /* LoginViewModel.swift */,
+				B74EDA232833464D002906DB /* RegisterViewModel.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -490,9 +499,12 @@
 				B7B5A5C0282158200021139D /* FeedViewModel.swift in Sources */,
 				B7073A6728255F5D009ACAF4 /* CommentCell.swift in Sources */,
 				B7B5A5C62821B69B0021139D /* FeedCellViewModel.swift in Sources */,
+				B74EDA2228334438002906DB /* LoginViewModel.swift in Sources */,
 				B7DF8680280F9E8E00559D34 /* MainTabView.swift in Sources */,
+				B74EDA1E283341C4002906DB /* CustomButton.swift in Sources */,
 				B7DF868C280FA9F800559D34 /* FeedCell.swift in Sources */,
 				B7B5A5B2281ABBE30021139D /* ProfileViewModel.swift in Sources */,
+				B74EDA242833464D002906DB /* RegisterViewModel.swift in Sources */,
 				B7053D2628182F7B00849F4A /* AuthViewModel.swift in Sources */,
 				B73A54FC2811A5E5004A34A5 /* UserListView.swift in Sources */,
 				B7073A5F28255F23009ACAF4 /* Comment.swift in Sources */,

@@ -20,8 +20,10 @@ class AuthViewModel: ObservableObject {
         fetchUser()
     }
     
-    func login(email: String, password: String) {
+    func login(email: String, password: String, completion: @escaping () -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            completion()
+            
             if let error = error {
                 return print(error.localizedDescription)
             }
@@ -34,7 +36,7 @@ class AuthViewModel: ObservableObject {
         }
     }
     
-    func register(email: String, password: String, username: String, fullname: String, photo: UIImage?) {
+    func register(email: String, password: String, username: String, fullname: String, photo: UIImage?, completion: @escaping () -> Void) {
         
         guard let photo = photo else { return }
         
@@ -43,6 +45,8 @@ class AuthViewModel: ObservableObject {
             
             // Try to create user on auth
             Auth.auth().createUser(withEmail: email, password: password) { result, error in
+                completion()
+                
                 if let error = error {
                     return print(error.localizedDescription)
                 }

@@ -11,7 +11,7 @@ struct PostDetailsView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    var viewModel: UploadPostViewModel;
+    @ObservedObject var viewModel: UploadPostViewModel;
     @Binding var selectedImage: UIImage?
     
     @Binding var selectedTab: MainTabs;
@@ -32,7 +32,7 @@ struct PostDetailsView: View {
                 
             }.padding()
             
-            Button(action: {
+            CustomButton(action: {
                 viewModel.uploadPost(caption: captionText, image: selectedImage!) { _ in
                     captionText = ""
                     selectedImage = nil
@@ -41,11 +41,12 @@ struct PostDetailsView: View {
                 }
             }, label: {
                 Text("Upload image")
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50)
-                    .background(.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(8)
-            }).padding(.horizontal, 15)
+            }, loading: viewModel.isPosting, loadingColor: .white)
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50)
+                .background(.blue)
+                .foregroundColor(.white)
+                .cornerRadius(8)
+                .padding(.horizontal, 15)
             
             Spacer()
         }

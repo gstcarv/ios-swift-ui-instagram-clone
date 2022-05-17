@@ -9,6 +9,8 @@ import SwiftUI
 
 struct LoginView: View {
     
+    @ObservedObject var viewModel: LoginViewModel = LoginViewModel();
+    
     @State private var email = ""
     @State private var password = ""
     
@@ -62,17 +64,21 @@ struct LoginView: View {
                     .padding(.vertical, 20)
                     
         
-                    Button(action: {
-                        AuthViewModel.shared.login(email: email, password: password)
-                    }) {
-                        Text("Sign In")
-                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 10)
-                            .font(.system(size: 14, weight: .semibold))
-                            .padding(15)
-                            .foregroundColor(.blue)
-                            .background(.white)
-                            .cornerRadius(100)
-                    }
+                    CustomButton(
+                        action: {
+                            viewModel.login(email: email, password: password)
+                        },
+                        label: {
+                            Text("Sign In")
+                                .font(.system(size: 14, weight: .semibold))
+                        },
+                        loading: viewModel.isLogging
+                    )
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 10)
+                    .padding(15)
+                    .foregroundColor(.blue)
+                    .background(.white)
+                    .cornerRadius(100)
                     .padding(.horizontal, 30)
                     
                     Spacer()

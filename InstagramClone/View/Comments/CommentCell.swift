@@ -19,6 +19,7 @@ struct CommentCell: View {
         HStack (alignment: .top) {
             KFImage(URL(string: comment.profileImageUrl))
                 .resizable()
+                .scaledToFill()
                 .frame(width: 36, height: 36)
                 .clipped()
                 .clipShape(Circle())
