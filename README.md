@@ -7,7 +7,7 @@
   <img src="./GithubAssets/icon.png" width="100" />
 
    <h2 align="center">
-    Swift UI Instagram Clone
+    Swift UI Instagram Clone + MVVM + Firebase
   </h2>
 
   <img src="https://img.shields.io/badge/Swift-5.x-orange.svg" />
