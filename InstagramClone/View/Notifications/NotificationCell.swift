@@ -36,15 +36,17 @@ struct NotificationCell: View {
             
             if notification.user != nil && (notification.type == .follow || notification.post != nil) {
                 NavigationLink(destination: linkDestination) {
-                    
-                    KFImage(URL(string: notification.profileImageUrl))
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 40, height: 40)
-                        .clipShape(Circle())
-                    
-                    Text(notification.username).font(.system(size: 14, weight: .semibold)) +
-                    Text(notification.type.notificationMessage).font(.system(size: 15, weight: .regular))
+                    HStack {
+                        KFImage(URL(string: notification.profileImageUrl))
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 40, height: 40)
+                            .clipShape(Circle())
+                        
+                        Text(notification.username).font(.system(size: 14, weight: .semibold)) +
+                        Text(notification.type.notificationMessage).font(.system(size: 14, weight: .regular))
+                    }
+                    .multilineTextAlignment(.leading)
                 }
                 
                 Spacer()
