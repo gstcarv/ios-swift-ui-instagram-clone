@@ -40,6 +40,7 @@
 		B75A554B281866CF008539DA /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75A554A281866CF008539DA /* ImageUploader.swift */; };
 		B75A5569281967F5008539DA /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75A5568281967F5008539DA /* FirebaseConstants.swift */; };
 		B75A556B2819693D008539DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75A556A2819693D008539DA /* User.swift */; };
+		B7A6B2A328343FA300FEB658 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A6B2A228343FA300FEB658 /* LaunchScreen.storyboard */; };
 		B7B5A5B2281ABBE30021139D /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5A5B1281ABBE30021139D /* ProfileViewModel.swift */; };
 		B7B5A5B4281AC0030021139D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5A5B3281AC0030021139D /* UserService.swift */; };
 		B7B5A5B6282068100021139D /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5A5B5282068100021139D /* UploadPostViewModel.swift */; };
@@ -104,6 +105,7 @@
 		B75A554A281866CF008539DA /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		B75A5568281967F5008539DA /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		B75A556A2819693D008539DA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B7A6B2A228343FA300FEB658 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7B5A5B1281ABBE30021139D /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		B7B5A5B3281AC0030021139D /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B7B5A5B5282068100021139D /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				B7DF8674280F9DAD00559D34 /* Profile */,
 				B7DF8673280F9DA800559D34 /* UploadPost */,
 				B7DF866E280F9D5500559D34 /* Main */,
+				B7A6B2A228343FA300FEB658 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7DF8661280F9C9400559D34 /* Preview Assets.xcassets in Resources */,
+				B7A6B2A328343FA300FEB658 /* LaunchScreen.storyboard in Resources */,
 				B7DF865E280F9C9400559D34 /* Assets.xcassets in Resources */,
 				B7053D162818299400849F4A /* GoogleService-Info.plist in Resources */,
 			);
@@ -639,6 +643,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"InstagramClone/Preview Content\"";
@@ -649,6 +654,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -669,6 +675,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"InstagramClone/Preview Content\"";
@@ -679,6 +686,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
